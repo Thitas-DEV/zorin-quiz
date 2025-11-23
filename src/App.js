@@ -342,7 +342,7 @@ export default function ZorinOSQuiz() {
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-              <img src="logo_empresa.png"></img>
+              <span className="text-2xl">🐧</span>
             </div>
             <h1 className="text-2xl font-light">AstroLogic</h1>
           </div>
