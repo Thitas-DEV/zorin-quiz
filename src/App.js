@@ -88,15 +88,16 @@ export default function ZorinOSQuiz() {
   ];
 
   // Função para fazer download das ISOs
- const downloadISO = (filename) => {
-  const downloadLinks = {
+  const downloadISO = (filename) => {
+    // Mapeamento das ISOs para os links de download
+    // SUBSTITUA os links abaixo pelos links reais das suas ISOs
+    const downloadLinks = {
     'zorin-os-gaming-edition.iso': 'https://file.pizza/download/e114czpg',
     // ...
   };
   
   window.open(downloadLinks[filename], '_blank');
-};
-    const link = downloadLinks[filename];
+
     
     // Verifica se o link está configurado
     if (link && !link.includes('SEU_ID')) {
