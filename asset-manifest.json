@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/zorin-quiz/static/css/main.d4f39ca3.css",
-    "main.js": "/zorin-quiz/static/js/main.3a9e4c99.js",
+    "main.js": "/zorin-quiz/static/js/main.5e14b65a.js",
     "static/js/453.34753410.chunk.js": "/zorin-quiz/static/js/453.34753410.chunk.js",
     "index.html": "/zorin-quiz/index.html",
     "main.d4f39ca3.css.map": "/zorin-quiz/static/css/main.d4f39ca3.css.map",
-    "main.3a9e4c99.js.map": "/zorin-quiz/static/js/main.3a9e4c99.js.map",
+    "main.5e14b65a.js.map": "/zorin-quiz/static/js/main.5e14b65a.js.map",
     "453.34753410.chunk.js.map": "/zorin-quiz/static/js/453.34753410.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d4f39ca3.css",
-    "static/js/main.3a9e4c99.js"
+    "static/js/main.5e14b65a.js"
   ]
 }
