@@ -88,16 +88,14 @@ export default function ZorinOSQuiz() {
   ];
 
   // Função para fazer download das ISOs
-  const downloadISO = (filename) => {
-    // Mapeamento das ISOs para os links de download
-    // SUBSTITUA os links abaixo pelos links reais das suas ISOs
-    const downloadLinks = {
-      'zorin-os-gaming-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb',
-      'zorin-os-work-edition.iso': 'https://drive.google.com/uc?export=download&id=SEU_ID_WORK_AQUI',
-      'zorin-os-developer-edition.iso': 'https://drive.google.com/uc?export=download&id=SEU_ID_DEV_AQUI',
-      'zorin-os-education-edition.iso': 'https://drive.google.com/uc?export=download&id=SEU_ID_EDUCATION_AQUI'
-    };
-
+ const downloadISO = (filename) => {
+  const downloadLinks = {
+    'zorin-os-gaming-edition.iso': 'https://file.pizza/download/e114czpg',
+    // ...
+  };
+  
+  window.open(downloadLinks[filename], '_blank');
+};
     const link = downloadLinks[filename];
     
     // Verifica se o link está configurado
@@ -222,7 +220,7 @@ export default function ZorinOSQuiz() {
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">⚡</span>
+                <span className="text-2xl">🐧</span>
               </div>
               <h1 className="text-2xl font-light">AstroLogic</h1>
             </div>
