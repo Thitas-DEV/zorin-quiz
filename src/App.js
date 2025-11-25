@@ -249,7 +249,7 @@ export default function ZorinOSQuiz() {
               <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700/30 text-center">
                 <div className="text-3xl mb-2">🚀</div>
                 <div className="text-slate-400 text-sm mb-1">Baseado em</div>
-                <div className="text-white font-semibold">Zorin OS 17</div>
+                <div className="text-white font-semibold">linux</div>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700/30 text-center">
                 <div className="text-3xl mb-2">💾</div>
@@ -330,7 +330,7 @@ export default function ZorinOSQuiz() {
             <h1 className="text-2xl font-light">AstroLogic</h1>
           </div>
           <h2 className="text-5xl font-bold mb-4">
-            Zorin OS
+            Linux
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Edições Personalizadas
