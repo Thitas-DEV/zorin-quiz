@@ -32,7 +32,7 @@ export default function ZorinOSQuiz() {
       options: [
         { value: 'steam', label: 'Steam, Discord, OBS', icon: '🎮' },
         { value: 'office', label: 'Office, Email, Navegadores', icon: '📊' },
-        { value: 'code', label: 'IDEs, Terminal, Git', icon: '⌨️' },
+        { value: 'code', label: 'IDEs, Terminal, Git', icon: '⌨' },
         { value: 'study', label: 'PDFs, Anotações, Pesquisa', icon: '📖' }
       ]
     },
@@ -50,7 +50,7 @@ export default function ZorinOSQuiz() {
       question: 'O que é mais importante para você?',
       options: [
         { value: 'performance', label: 'Performance e velocidade', icon: '⚡' },
-        { value: 'stability', label: 'Estabilidade e confiabilidade', icon: '🛡️' },
+        { value: 'stability', label: 'Estabilidade e confiabilidade', icon: '🛡' },
         { value: 'features', label: 'Recursos e funcionalidades', icon: '✨' },
         { value: 'simplicity', label: 'Simplicidade e facilidade', icon: '🎯' }
       ]
@@ -87,36 +87,20 @@ export default function ZorinOSQuiz() {
     }
   ];
 
-  // Função para fazer download das ISOs
   const downloadISO = (filename) => {
-    // Mapeamento das ISOs para os links de download
-    // SUBSTITUA os links abaixo pelos links reais das suas ISOs
     const downloadLinks = {
-    'zorin-os-gaming-edition.iso': 'https://file.pizza/download/e114czpg',
-    // ...
-  };
-  
-  window.open(downloadLinks[filename], '_blank');
+      'linux-gaming-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb',
+      'linux-work-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb',
+      'linux-developer-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb',
+      'linux-education-edition.iso': 'https://drive.google.com/uc?export=download&id=1A7wHq0aIP7pWIiU08ppDnDrAst-A-28m'
+    };
 
+    const link = downloadLinks[filename];
     
-    // Verifica se o link está configurado
-    if (link && !link.includes('SEU_ID')) {
-      // Cria um link invisível e simula o clique para download
-      const a = document.createElement('a');
-      a.href = link;
-      a.download = filename;
-      a.target = '_blank';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+    if (link) {
+      window.open(link, '_blank');
     } else {
-      // Mostra mensagem se o link ainda não foi configurado
-      alert('📥 ISO ainda não disponível para download.\n\n' +
-            '⚠️ Configure os links no código:\n' +
-            '1. Faça upload das ISOs no Google Drive, MEGA ou Dropbox\n' +
-            '2. Pegue os links de download direto\n' +
-            '3. Substitua os links na função downloadISO() no código\n\n' +
-            'Arquivo: ' + filename);
+      alert('ISO não disponível no momento.');
     }
   };
 
@@ -125,7 +109,7 @@ export default function ZorinOSQuiz() {
     
     const editions = {
       gaming: {
-        name: 'Zorin OS Gaming Edition',
+        name: 'linux Gaming Edition',
         tagline: 'Pronto para jogar',
         description: 'Versão otimizada do Zorin OS com todos os drivers e ferramentas para gaming pré-instalados. Interface familiar do Windows, perfeita para gamers.',
         download: 'zorin-os-gaming-edition.iso',
@@ -142,10 +126,10 @@ export default function ZorinOSQuiz() {
         ]
       },
       work: {
-        name: 'Zorin OS Work Edition',
+        name: 'linux Work Edition',
         tagline: 'Produtividade total',
         description: 'Versão profissional do Zorin OS com suite completa de aplicativos para trabalho. Interface intuitiva que funciona desde o primeiro boot.',
-        download: 'zorin-os-work-edition.iso',
+        download: 'linux-work-edition.iso',
         size: '3.8 GB',
         preInstalled: [
           'LibreOffice Suite completa',
@@ -159,10 +143,10 @@ export default function ZorinOSQuiz() {
         ]
       },
       programming: {
-        name: 'Zorin OS Developer Edition',
+        name: 'linux Developer Edition',
         tagline: 'Ambiente de desenvolvimento completo',
         description: 'Versão do Zorin OS otimizada para desenvolvedores com todas as ferramentas e IDEs pré-configuradas. Comece a codar imediatamente.',
-        download: 'zorin-os-developer-edition.iso',
+        download: 'linux-developer-edition.iso',
         size: '4.5 GB',
         preInstalled: [
           'Visual Studio Code configurado',
@@ -176,10 +160,10 @@ export default function ZorinOSQuiz() {
         ]
       },
       study: {
-        name: 'Zorin OS Education Edition',
+        name: 'linux Education Edition',
         tagline: 'Aprendizado sem limites',
         description: 'Versão educacional do Zorin OS com aplicativos para estudos, pesquisa e aprendizado. Tudo pronto para uso acadêmico.',
-        download: 'zorin-os-education-edition.iso',
+        download: 'linux-education-edition.iso',
         size: '3.6 GB',
         preInstalled: [
           'LibreOffice para trabalhos',
@@ -221,7 +205,7 @@ export default function ZorinOSQuiz() {
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">🐧</span>
+                <span className="text-2xl">⚡</span>
               </div>
               <h1 className="text-2xl font-light">AstroLogic</h1>
             </div>
@@ -281,7 +265,7 @@ export default function ZorinOSQuiz() {
 
             <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-xl p-6 mb-8">
               <h4 className="font-semibold mb-3 text-blue-300 flex items-center gap-2">
-                <span>ℹ️</span> Como usar sua ISO personalizada
+                <span>ℹ</span> Como usar sua ISO personalizada
               </h4>
               <ol className="space-y-2 text-slate-300 text-sm">
                 <li className="flex gap-3">
@@ -371,7 +355,7 @@ export default function ZorinOSQuiz() {
             <div className="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
               <div 
                 className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-500 ease-out"
-                style={{ width: `${progress}%` }}
+                style={{ width: `${progress}%`}}
               ></div>
             </div>
           </div>
@@ -417,7 +401,6 @@ export default function ZorinOSQuiz() {
           <p>27 March, 2024 • nebula.app.br</p>
         </div>
 
-        {/* Decorative elements */}
         <div className="fixed top-20 left-10 w-16 h-16 bg-blue-600 rounded-full opacity-50 blur-2xl"></div>
         <div className="fixed top-40 right-20 w-24 h-24 bg-purple-600 rounded-full opacity-30 blur-3xl"></div>
         <div className="fixed bottom-20 left-1/4 w-20 h-20 bg-blue-500 rounded-full opacity-40 blur-2xl"></div>
