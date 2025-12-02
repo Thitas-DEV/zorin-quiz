@@ -89,10 +89,10 @@ export default function ZorinOSQuiz() {
 
   const downloadISO = (filename) => {
     const downloadLinks = {
-      'linux-gaming-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb',
+      'linux-gaming-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb'',
       'linux-work-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb',
-      'linux-developer-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb',
-      'linux-education-edition.iso': 'https://drive.google.com/uc?export=download&id=1A7wHq0aIP7pWIiU08ppDnDrAst-A-28m'
+      'linux-developer-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb'',
+      'linux-education-edition.iso': 'https://drive.google.com/uc?export=download&id=1QJBHpmGVht8_dOpGfcDU3yvR_ZdZLUyb''
     };
 
     const link = downloadLinks[filename];
